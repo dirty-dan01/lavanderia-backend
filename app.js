@@ -8,7 +8,6 @@ const port = 3000
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended: true}))
 
-
 app.use('/api', routes)
 
 app.get('/', (req, res) => {

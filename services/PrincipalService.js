@@ -75,6 +75,18 @@ module.exports.getUsuario = (req, res) => {
     })
 }
 
+module.exports.getUsuarios = (req, res) => {
+    let query = `SELECT * FROM usuario`
+
+    conection.query(query, (error, result, fields) => {
+        if(error)
+            res.send(error)
+        else{
+            res.send(result)
+        }
+    })
+}
+
 module.exports.getPrenda = (req, res) => {
     let idCliente = req.params.id
     let query = `SELECT * FROM prenda WHERE prendaId = ${idCliente}`

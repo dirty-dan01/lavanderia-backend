@@ -9,6 +9,7 @@ router.post('/prenda', clienteService.createPrenda) // http://localhost:3000/api
 router.get('/cliente/:id', clienteService.getCliente)
 router.get('/usuario/:id', clienteService.getUsuario)
 router.get('/prenda/:id', clienteService.getPrenda)
+router.get('/usuarios', clienteService.getUsuarios)
 
 router.put('/cliente', clienteService.updateCliente)
 router.put('/usuario', clienteService.updateUsuario)
