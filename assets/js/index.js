@@ -5,13 +5,11 @@ function onLoad() {
 function getUsers() {
     fetch("http://localhost:3000/api/usuarios", {
         method: "GET",
-        mode: 'no-cors',
-        headers: {
-            "Access-Control-Allow-Origin": "*"
-        }
+        mode: 'cors',
+        headers: { "Content-Type": "application/json" }
     })
     .then(response => {
-        console.log(response.body)
+        console.log(response)
         response.json()
     })
     .then(response => {

@@ -82,7 +82,7 @@ module.exports.getUsuarios = (req, res) => {
         if(error)
             res.send(error)
         else{
-            res.send(result)
+            res.json(result)
         }
     })
 }
